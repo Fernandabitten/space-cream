@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --ff-texting: "Staatliches", sans-serif;
+  --ff-paragraph: "Palanquin", sans-serif;
+  --bg-body: #eff1ff;
+  --bg-header: #8e9aaf;
+  --bg-header-title: #cbc0d3;
+  --bg-card-botton: #feeafa;
+  --fc-primary: #ffffff;
+  --fc-secundary: #23053a;
+  --fc-card: #694a4a;
+  --fc-footer: #4a4e69;
+
+  font-size: 62.5%;
+  --fs-body: 2rem;
+  --fs-heading: 4rem;
+  --fs-footer: 1.4rem;
+}
+body {
+  font-family: var(--ff-texting);
+  font-size: var(--fs-body);
+}
+.page {
+  max-width: 38.4rem;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 6rem;
+  margin: auto;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+header {
+  background-color: var(--bg-header);
+}
+header .logo {
+  margin-top: 3.2rem;
+  width: 21.5rem;
+}
+header #title {
+  background-color: var(--bg-header-title);
+  margin-top: 3.2rem;
+}
+header #title h1 {
+  letter-spacing: 0.05em;
+  color: var(--bg-body);
+  margin-bottom: 2.9rem;
+  font-size: var(--fs-heading);
+}
+.text {
+  font-family: var(--ff-paragraph);
+  color: var(--bg-body);
+  line-height: 2rem;
+  word-spacing: 10px;
+  text-align: center;
+  padding: 2rem 3.9rem 6.3rem;
+  font-weight: 400;
+}
+main {
+  padding: 2rem 3.2rem 6rem;
+  display: grid;
+  gap: 3.2rem;
+}
+.card {
+  position: relative;
+}
+.card p {
+  position: absolute;
+  text-align: center;
+  top: 1.6rem;
+  right: 1.6rem;
+  width: 11.2rem;
+  border-radius: 2rem;
+  color: var(--fc-card);
+  background: var(--bg-card-botton);
+}
+.card p {
+  animation: topdown 700ms;
+}
+.card img {
+  animation: topdown 700ms reverse;
+  transition: all 200ms;
+}
+.card img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+footer p {
+  font-size: var(--fs-footer);
+  color: var(--fc-footer);
+}
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-45px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (min-width: 930px) {
+  :root {
+    --fs-heading: 4.8rem;
+    --fs-body: 2.4rem;
+  }
+  .logo {
+    width: 100%;
+  }
+  .page {
+    max-width: 128rem;
+    display: flex;
+  }
+  .hide {
+    display: none;
+  }
+  .header {
+    height: 72rem;
+    width: 37.7rem;
+    margin-left: -3.5rem;
+  }
+  .text {
+    line-height: 2rem;
+  }
+  main {
+    margin-top: 5rem;
+    margin-left: 10rem;
+  }
+  main {
+    grid-template-areas:
+      "A B C"
+      "D E F";
+  }
+  main div:nth-child(1) {
+    grid-area: A;
+    width: 22rem;
+    height: 15rem;
+  }
+  main div:nth-child(3) {
+    grid-area: B;
+    width: 22rem;
+    height: 35rem;
+  }
+  main div:nth-child(5) {
+    grid-area: C;
+    width: 22rem;
+    height: 35rem;
+  }
+  main div:nth-child(2) {
+    grid-area: D;
+    width: 22rem;
+    height: 15rem;
+    margin-top: -18rem;
+  }
+  main div:nth-child(4) {
+    grid-area: E;
+    width: 22rem;
+    height: 15rem;
+    margin-top: -4rem;
+  }
+  main div:nth-child(6) {
+    grid-area: F;
+    width: 22rem;
+    height: 35rem;
+    margin-top: -18rem;
+  }
+  footer {
+    margin-top: -2rem;
+  }
+}
