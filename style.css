@@ -56,9 +56,9 @@ header #title h1 {
   font-family: var(--ff-paragraph);
   color: var(--bg-body);
   line-height: 2rem;
-  word-spacing: 10px;
+  word-spacing: 6px;
   text-align: center;
-  padding: 2rem 3.9rem 6.3rem;
+  padding: 2.5rem 2.9rem 4.3rem 1rem;
   font-weight: 400;
 }
 main {
@@ -125,10 +125,11 @@ footer p {
     margin-left: -3.5rem;
   }
   .text {
+    margin-top: -2rem;
     line-height: 2rem;
   }
   main {
-    margin-top: 5rem;
+    margin-top: 1rem;
     margin-left: 10rem;
   }
   main {
@@ -170,6 +171,6 @@ footer p {
     margin-top: -18rem;
   }
   footer {
-    margin-top: -2rem;
+    margin-top: -5rem;
   }
 }
